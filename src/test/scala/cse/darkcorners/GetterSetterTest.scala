@@ -151,7 +151,7 @@ class GetterSetterTest extends path.FunSpec {
     describe ("Given an empty StarMap") {
       val subject = new StarMap ()
 
-      describe ("then filled with a few stars") {
+      describe ("that is then filled with a few stars") {
         subject (134.2, -172.3, 14.3) = "Spica"
         subject (-7.3, 4.8, 2.0) = "Epsilon Eridani"
         subject (0.4, -3.1, -65.3) = "Aldebaran"

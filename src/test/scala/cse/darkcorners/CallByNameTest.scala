@@ -111,31 +111,31 @@ class CallByNameTest extends path.FunSpec {
     }
 
     describe ("A non-lazy val") {
-      log += "before"
+      log += "before declaration"
       val nonLazyVal = add (4, 5)
-      log += "after"
+      log += "after declaration"
       log += s"result: $nonLazyVal"
 
       it ("acts just as expected") {
         assert (log === ListBuffer (
-          "before",
+          "before declaration",
           "4 + 5 == 9",
-          "after",
+          "after declaration",
           "result: 9"
         ))
       }
     }
 
     describe ("A lazy val") {
-      log += "before"
+      log += "before declaration"
       lazy val lazyVal = add (4, 5);
-      log += "after"
+      log += "after declaration"
       log += s"result: $lazyVal"
 
       it ("acts a little differently") {
         assert (log === ListBuffer (
-          "before",
-          "after",
+          "before declaration",
+          "after declaration",
           "4 + 5 == 9",
           "result: 9"
         ))
