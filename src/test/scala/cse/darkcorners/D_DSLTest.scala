@@ -5,9 +5,9 @@ import org.scalatest.path
 /**
   * Created by dnwiebe on 4/26/17.
   */
-class DSLTest extends path.FunSpec {
+class D_DSLTest extends path.FunSpec {
 
-  describe ("You can define your own language 'keywords'.") {
+  describe ("With multiple parameter lists, you can define your own language 'keywords'.") {
     def myWhile (cond: => Boolean) (code: => Unit): Unit = {
       if (cond) {
         code

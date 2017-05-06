@@ -5,7 +5,7 @@ import org.scalatest.path
 /**
   * Created by dnwiebe on 4/26/17.
   */
-class RegexTest extends path.FunSpec {
+class M_RegexTest extends path.FunSpec {
 
   describe ("Regular expressions in Scala have unapply extractors.") {
     val regex = """(\d\d)/(\d\d)/(\d\d\d\d)""".r

@@ -7,7 +7,7 @@ import scala.collection.mutable.ListBuffer
 /**
   * Created by dnwiebe on 4/26/17.
   */
-class CallByNameTest extends path.FunSpec {
+class G_CallByNameTest extends path.FunSpec {
   // http://stackoverflow.com/questions/1025181/hidden-features-of-scala
 
   describe ("Regarding call-by-name") {
@@ -63,11 +63,12 @@ class CallByNameTest extends path.FunSpec {
   }
 
   describe ("One quite reasonable use of call-by-name is forensic logging.") {
-    var currentLoggingLevel = 3
+    val messages = new ListBuffer[String] ()
+    var currentLogFilter = 3
 
     def log (message: => String, level: Int): Unit = { // call by name
-      if (level >= currentLoggingLevel) {
-        println (message)
+      if (level > currentLogFilter) {
+        messages += message
       }
     }
 
@@ -76,8 +77,8 @@ class CallByNameTest extends path.FunSpec {
       message
     }
 
-    describe ("When the current logging level filters out the log") {
-      currentLoggingLevel = 5
+    describe ("When the log isn't important enough to match the current logging filter") {
+      currentLogFilter = 5
 
       val before = System.currentTimeMillis ()
       log (complicatedFormatter ("Nobody listens to a word I say"), 3)
@@ -88,8 +89,8 @@ class CallByNameTest extends path.FunSpec {
       }
     }
 
-    describe ("Only when the current logging level accepts the log") {
-      currentLoggingLevel = 1
+    describe ("Only when the log is important enough") {
+      currentLogFilter = 1
 
       val before = System.currentTimeMillis ()
       log (complicatedFormatter ("Now they're a little more interested"), 3)

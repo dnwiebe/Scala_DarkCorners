@@ -5,9 +5,10 @@ import org.scalatest.path
 /**
   * Created by dnwiebe on 4/26/17.
   */
-class LocallyTest extends path.FunSpec {
+class A_LocallyTest extends path.FunSpec {
 
-  describe ("The locally function is defined in Predef.scala, so you get it for free:") {
+  describe ("The locally function is defined in Predef.scala, so you get it for free.") {
+
     it ("It introduces a temporary bubble of alternate reality.") {
       val mood = "I hate my life.  Everything sucks."
 

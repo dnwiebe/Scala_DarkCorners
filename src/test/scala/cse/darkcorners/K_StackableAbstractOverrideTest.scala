@@ -7,7 +7,7 @@ import scala.collection.mutable.ListBuffer
 /**
   * Created by dnwiebe on 4/26/17.
   */
-class StackableAbstractOverrideTest extends path.FunSpec {
+class K_StackableAbstractOverrideTest extends path.FunSpec {
   describe ("You can use abstract and super keywords in stackable traits") {
     val log = new ListBuffer[String]
 

@@ -5,9 +5,9 @@ import org.scalatest.path
 /**
   * Created by dnwiebe on 4/26/17.
   */
-class RequireTest extends path.FunSpec {
+class B_RequireTest extends path.FunSpec {
 
-  describe ("In Predef.h, which means you have access to it with no import, is the require function.") {
+  describe ("In Predef.scala, which means you have access to it with no import, is the require function.") {
 
     describe ("You can use it very simply to make runtime assertions.") {
       def choosyMethod (parameter: Int): Int = {
@@ -50,8 +50,8 @@ class RequireTest extends path.FunSpec {
       }
     }
 
-    describe ("The message is call-by-name, so you can do other things with it too.") {
-      var errorCount = 0;
+    describe ("The message is call-by-name (more later), so you can do other things with it too.") {
+      var errorCount = 0
 
       def choosyMethod (parameter: Int): Int = {
         require (parameter > 0, {errorCount += 1; s"$parameter is too small; must be > 0"})
