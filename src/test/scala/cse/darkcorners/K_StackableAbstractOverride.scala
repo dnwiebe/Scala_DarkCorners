@@ -3,6 +3,7 @@ package cse.darkcorners
 import org.scalatest.path
 
 import scala.collection.mutable.ListBuffer
+import scala.util.matching.Regex
 
 /**
   * Created by dnwiebe on 4/26/17.
@@ -20,7 +21,7 @@ class K_StackableAbstractOverride extends path.FunSpec {
         val start = System.currentTimeMillis
         val result = super.reverse (s)
         val dur = System.currentTimeMillis-start
-        log += "Executed reverse in %s ms".format (dur)
+        log += "Executed reverse in %d ms".format (dur)
         result
       }
     }
@@ -47,8 +48,12 @@ class K_StackableAbstractOverride extends path.FunSpec {
 
       it ("all the stacked traits are called") {
         assert (log (0) === "Called reverse with s=booga")
-        assert (log (1).startsWith ("Executed reverse in "))
+        assert (contains (log (1), """Executed reverse in \d+ ms""".r))
       }
     }
+  }
+
+  def contains (string: String, regex: Regex): Boolean = {
+    regex.findFirstIn (string).nonEmpty
   }
 }
