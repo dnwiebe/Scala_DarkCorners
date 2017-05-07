@@ -5,7 +5,7 @@ import org.scalatest.path
 /**
   * Created by dnwiebe on 4/26/17.
   */
-class B_RequireTest extends path.FunSpec {
+class B_Require extends path.FunSpec {
 
   describe ("In Predef.scala, which means you have access to it with no import, is the require function.") {
 

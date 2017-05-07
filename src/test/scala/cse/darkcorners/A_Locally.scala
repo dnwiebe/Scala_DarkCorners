@@ -5,7 +5,7 @@ import org.scalatest.path
 /**
   * Created by dnwiebe on 4/26/17.
   */
-class A_LocallyTest extends path.FunSpec {
+class A_Locally extends path.FunSpec {
 
   describe ("The locally function is defined in Predef.scala, so you get it for free.") {
 

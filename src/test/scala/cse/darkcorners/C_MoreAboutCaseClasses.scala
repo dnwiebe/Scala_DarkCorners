@@ -5,7 +5,7 @@ import org.scalatest.path
 /**
   * Created by dnwiebe on 4/26/17.
   */
-class C_MoreAboutCaseClassesTest extends path.FunSpec {
+class C_MoreAboutCaseClasses extends path.FunSpec {
 
   case class Car (make: String, model: String, year: Int, electric: Boolean)
 

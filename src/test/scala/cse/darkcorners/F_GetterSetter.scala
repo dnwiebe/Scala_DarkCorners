@@ -8,7 +8,7 @@ import scala.collection.mutable.ListBuffer
 /**
   * Created by dnwiebe on 4/26/17.
   */
-class F_GetterSetterTest extends path.FunSpec {
+class F_GetterSetter extends path.FunSpec {
 
   describe ("If you need to write Scala code that interops with Java, you might need getters and setters.") {
     class Person {

@@ -5,7 +5,7 @@ import org.scalatest.path
 /**
   * Created by dnwiebe on 4/26/17.
   */
-class L_UnapplyTest extends path.FunSpec {
+class L_Unapply extends path.FunSpec {
   describe ("You probably know that tuples in Scala have extractor functionality.") {
 
     describe ("Given a tuple") {

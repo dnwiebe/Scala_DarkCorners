@@ -7,7 +7,7 @@ import scala.collection.mutable.ListBuffer
 /**
   * Created by dnwiebe on 4/26/17.
   */
-class G_CallByNameTest extends path.FunSpec {
+class G_CallByName extends path.FunSpec {
   // http://stackoverflow.com/questions/1025181/hidden-features-of-scala
 
   describe ("Regarding call-by-name") {
