@@ -5,7 +5,7 @@ import org.scalatest.path
 /**
   * Created by dnwiebe on 4/26/17.
   */
-class H_Infix extends path.FunSpec {
+class I_Infix extends path.FunSpec {
 
   describe ("Methods with one parameter") {
     class InfixDemo (p: Int) {

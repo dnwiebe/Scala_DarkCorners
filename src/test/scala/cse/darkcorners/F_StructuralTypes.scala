@@ -8,7 +8,7 @@ import org.scalatest.path
 /**
   * Created by dnwiebe on 4/26/17.
   */
-class J_StructuralTypes extends path.FunSpec {
+class F_StructuralTypes extends path.FunSpec {
 
   describe ("Structural types are Scala's answer to duck typing in dynamically-typed languages.") {
     def andThenClose[T] (closeable: {def close (): Unit}) (code: => T): T = {

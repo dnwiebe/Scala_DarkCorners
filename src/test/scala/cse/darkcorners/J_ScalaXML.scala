@@ -7,7 +7,7 @@ import scala.xml.NodeSeq
 /**
   * Created by dnwiebe on 4/26/17.
   */
-class I_ScalaXML extends path.FunSpec {
+class J_ScalaXML extends path.FunSpec {
 
   describe ("If you include scala-xml_2.12 in your build") {
     describe ("then XML becomes part of the syntax of Scala.") {

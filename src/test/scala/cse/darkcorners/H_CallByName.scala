@@ -7,7 +7,7 @@ import scala.collection.mutable.ListBuffer
 /**
   * Created by dnwiebe on 4/26/17.
   */
-class G_CallByName extends path.FunSpec {
+class H_CallByName extends path.FunSpec {
   describe ("Regarding call-by-name") {
     val log = new ListBuffer[String] ()
 
