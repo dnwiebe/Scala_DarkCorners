@@ -18,7 +18,7 @@ class H_Infix extends path.FunSpec {
     describe ("can be called with dot notation and parentheses, of course") {
       val result = subject.a (5)
 
-      it ("and get what you're expecting") {
+      it ("and produce what you're expecting") {
         assert (result === 15)
       }
     }
@@ -26,7 +26,7 @@ class H_Infix extends path.FunSpec {
     describe ("can be called with no dot and no parentheses: in other words, infix") {
       val result = subject s 7
 
-      it ("and also get what you're expecting") {
+      it ("and also produce what you're expecting") {
         assert (result === 3)
       }
     }

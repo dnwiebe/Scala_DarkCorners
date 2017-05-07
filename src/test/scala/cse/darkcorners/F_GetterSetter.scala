@@ -69,7 +69,7 @@ class F_GetterSetter extends path.FunSpec {
     }
   }
 
-  describe ("And while we're at it, what about native Scala getters and setters?") {
+  describe ("And while we're at it, what about native Scala 'getters' and 'setters?'") {
 
     class Coordinates (val windowX: Int, val windowY: Int) {
       private var viewportOffsetX = 0

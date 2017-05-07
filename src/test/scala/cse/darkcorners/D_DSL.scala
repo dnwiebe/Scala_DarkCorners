@@ -102,7 +102,6 @@ class D_DSL extends path.FunSpec {
   }
 
   describe ("We can go a little further, too...") {
-    // example from http://stackoverflow.com/questions/1025181/hidden-features-of-scala
     def dont (code: => Unit) = new DontCommand (code)
     class DontCommand (code: => Unit) {
       def unless (cond: => Boolean): Unit = if (cond) code

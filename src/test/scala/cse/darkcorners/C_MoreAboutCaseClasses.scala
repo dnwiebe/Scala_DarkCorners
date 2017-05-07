@@ -49,7 +49,7 @@ class C_MoreAboutCaseClasses extends path.FunSpec {
       val make = car.productElement (0)
       val year = car.productElement (2)
 
-      it ("and their values are what you expect") {
+      it ("and their values are what you expect, although your variables are Anys") {
         assert (make === car.make)
         assert (year === car.year)
       }
