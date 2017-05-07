@@ -8,8 +8,6 @@ import scala.collection.mutable.ListBuffer
   * Created by dnwiebe on 4/26/17.
   */
 class G_CallByName extends path.FunSpec {
-  // http://stackoverflow.com/questions/1025181/hidden-features-of-scala
-
   describe ("Regarding call-by-name") {
     val log = new ListBuffer[String] ()
 

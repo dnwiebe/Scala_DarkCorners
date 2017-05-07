@@ -11,7 +11,7 @@ class M_Regex extends path.FunSpec {
     val regex = """(\d\d)/(\d\d)/(\d\d\d\d)""".r
 
     describe ("You can use the extractor to declare variables") {
-      val regex(month, day, year) = "10/14/2006"
+      val regex (month, day, year) = "10/14/2006"
 
       it ("and find the values you expect in them") {
         assert (month === "10")

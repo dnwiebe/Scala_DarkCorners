@@ -131,8 +131,8 @@ class D_DSL extends path.FunSpec {
       }
 
       it ("Let's break that down a little.") {
-        def code () = {flag = true}
-        val dontCommand = dont (code ())
+        def code = {flag = true}
+        val dontCommand = dont (code)
 
         dontCommand.unless (false)
 
@@ -144,13 +144,13 @@ class D_DSL extends path.FunSpec {
       }
 
       it ("Let's break it down a little less.") {
-        def code () = {flag = true}
+        def code = {flag = true}
 
-        dont (code ()).unless (false)
+        dont (code).unless (false)
 
         assert (flag === false)
 
-        dont (code ()).unless (true)
+        dont (code).unless (true)
 
         assert (flag === true)
       }

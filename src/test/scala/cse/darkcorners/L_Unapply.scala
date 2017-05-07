@@ -11,6 +11,17 @@ class L_Unapply extends path.FunSpec {
     describe ("Given a tuple") {
       val tuple = ("Ford", "Focus", 2013, true)
 
+      describe ("you can extract it with a val") {
+        val (make, model, year, electric) = tuple
+
+        it ("and get the values out") {
+            assert (make === tuple._1)
+            assert (model === tuple._2)
+            assert (year === tuple._3)
+            assert (electric === tuple._4)
+        }
+      }
+
       it ("you can extract it with a match statement and get the values out") {
         tuple match {
           case (make, model, year, electric) => {
@@ -30,6 +41,17 @@ class L_Unapply extends path.FunSpec {
     describe ("Given a case class instance") {
       case class Car (make: String, model: String, year: Int, electric: Boolean)
       val subject = Car ("Ford", "Focus", 2013, true)
+
+      describe ("you can extract it with a val") {
+        val Car (make, model, year, electric) = subject
+
+        it ("and get the values out") {
+          assert (make === subject.make)
+          assert (model === subject.model)
+          assert (year === subject.year)
+          assert (electric === subject.electric)
+        }
+      }
 
       it ("you can extract it with a match statement and get the values out") {
         subject match {
@@ -56,12 +78,15 @@ class L_Unapply extends path.FunSpec {
       }
       val subject = new Car ("Ford", "Focus", 2013, true)
 
-      it ("you can extract it with val and get the values out") {
+      describe ("you can extract it with val") {
         val CarAll (make, model, year, electric) = subject
-        assert (make === subject.make)
-        assert (model === subject.model)
-        assert (year === subject.year)
-        assert (electric === subject.electric)
+
+        it ("and get the values out") {
+          assert (make === subject.make)
+          assert (model === subject.model)
+          assert (year === subject.year)
+          assert (electric === subject.electric)
+        }
       }
 
       it ("you can extract it with a match statement and get the values out") {
@@ -91,11 +116,14 @@ class L_Unapply extends path.FunSpec {
       val gas = new Car ("Ford", "Focus", 2013, false)
       val electric = new Car ("Toyota", "Prius", 2015, true)
 
-      it ("you can extract the non-electric with val and get out the values") {
+      describe ("you can extract the non-electric with val") {
         val CarAllNonElectric (make, model, year) = gas
-        assert (make === gas.make)
-        assert (model === gas.model)
-        assert (year === gas.year)
+
+        it (" and get out the values") {
+          assert (make === gas.make)
+          assert (model === gas.model)
+          assert (year === gas.year)
+        }
       }
 
       it ("you can extract the non-electric with a match statement and get out the values") {
