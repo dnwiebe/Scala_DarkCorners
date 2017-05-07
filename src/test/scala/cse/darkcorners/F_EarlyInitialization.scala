@@ -7,7 +7,7 @@ import org.scalatest.path
 /**
   * Created by dnwiebe on 4/26/17.
   */
-class E_EarlyInitialization extends path.FunSpec {
+class F_EarlyInitialization extends path.FunSpec {
 
   describe ("Given a trait that requires quick initialization") {
     trait ToStringCacher[T] {
