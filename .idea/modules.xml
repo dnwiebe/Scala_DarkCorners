@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/darkcorners.iml" filepath="$PROJECT_DIR$/.idea/modules/darkcorners.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/darkcorners-build.iml" filepath="$PROJECT_DIR$/.idea/modules/darkcorners-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/scala_darkcorners.iml" filepath="$PROJECT_DIR$/.idea/modules/scala_darkcorners.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/scala_darkcorners-build.iml" filepath="$PROJECT_DIR$/.idea/modules/scala_darkcorners-build.iml" />
     </modules>
   </component>
 </project>
